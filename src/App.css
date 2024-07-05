@@ -1,0 +1,78 @@
+/* App.css */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+  /* Ensure full viewport height */
+}
+
+.left-side,
+.right-side {
+  flex: 1;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.graph-container {
+  margin-top: 20px;
+}
+
+/* Current Weather */
+.weather {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+/* Hourly Forecast */
+.hourly-forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hourly-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+
+}

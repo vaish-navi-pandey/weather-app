@@ -1,0 +1,187 @@
+/* Additions and modifications to existing CSS */
+
+/* Container for the overall title */
+.title {
+    font-size: 23px;
+    font-weight: 700;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  /* Styling for each hourly item */
+  .hourly-forecast {
+    display: flex;
+    
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  overflow-y: auto; /* Enable vertical scrolling */
+  gap: 10px; /* Adjust as needed */
+  padding-bottom: 10px; /* Add some bottom padding for better UX */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  width: 100%; /* Set the container width */
+  }
+  
+  
+  .hourly-item {
+
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    width: 140px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex: 0 0 calc(50% - 10px); /* Set item width for small devices */
+  max-width: calc(50% - 10px);
+    min-width: 150px; 
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hourly-item .time {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .hourly-item .icon-small {
+    width: 40px;
+    margin-bottom: 5px;
+  }
+  
+  .hourly-item .description {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .hourly-item .temperature {
+    font-size: 20px;
+    font-weight: 500;
+    color: #212121;
+    width: 70px;
+    letter-spacing: 1px;
+  }
+  
+  /* Styling for daily forecast items */
+  .daily-item {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    height: 40px;
+    margin: 5px;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    padding: 5px 20px;
+    justify-content: space-between;
+  }
+  
+  .icon-small {
+    width: 40px;
+  }
+  
+  .daily-item .day {
+    cursor: inherit;
+    color: #212121;
+    flex: 1 1;
+    font-weight: 600;
+    margin-left: 15px;
+  }
+  
+  .description {
+    cursor: inherit;
+    flex: 1 1;
+    margin-right: 15px;
+    text-align: right;
+  }
+  
+  .min-max {
+    color: #757575;
+  }
+  
+  /* Styling for each hourly interval within a day */
+  .time-interval {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .interval-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .interval-item label {
+    margin-right: 10px;
+  }
+  
+  .interval-item .time {
+    font-weight: 600;
+    flex: 1 1;
+  }
+  
+  .interval-item .icon-small {
+    width: 30px; /* Slightly smaller for hourly intervals */
+    margin-right: 10px;
+  }
+  
+  .interval-item .description {
+    flex: 2 1;
+    text-align: left;
+  }
+  
+  .interval-item .min-max {
+    flex: 1 1;
+    text-align: right;
+  }
+  
+  /* Grid for detailed information */
+  .daily-details-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 15px;
+    row-gap: 10px;
+    padding: 5px 15px;
+  }
+  
+  .daily-details-grid-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+  }
+  
+  .daily-details-grid-item label:first-child {
+    color: #757575;
+  }
+  
+  .daily-details-grid-item label:last-child {
+    color: #212121;
+  }
+  
+  /* Media query for responsive design */
+  @media (max-width: 768px) {
+    .hourly-item {
+        flex: 0 0 calc(25% - 10px); /* Set item width for larger devices */
+        max-width: calc(25% - 10px); /* Set maximum width for larger devices */
+      }
+    .hourly-forecast, .daily-item, .interval-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .hourly-item, .daily-item .day, .interval-item .time, .interval-item .description, .interval-item .min-max {
+      text-align: left;
+      margin: 2px 0;
+    }
+  
+    .hourly-item, .daily-item .day {
+      margin-left: 0;
+    }
+  
+    .interval-item .icon-small {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+  
